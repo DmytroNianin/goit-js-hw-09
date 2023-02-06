@@ -2,12 +2,13 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const refs = {
   form: document.querySelector('.form'),
-  delay: document.getElementsByName('delay'),
-  step: document.getElementsByName('step'),
-  amount: document.getElementsByName('amount'),
+  delay: document.querySelector('input[name="delay"]'),
+  step: document.querySelector('input[name="step"]'),
+  amount: document.querySelector('input[name="amount"]'),
+  submitBtn: document.querySelector('button'),
 };
 
-refs.form.addEventListener('submit', onButtonSubmit);
+refs.submitBtn.addEventListener('submit', onButtonSubmit);
 
 function onButtonSubmit(e) {
   e.preventDefault();
